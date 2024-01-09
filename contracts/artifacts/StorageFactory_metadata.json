@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.8+commit.dddeac2f"
+		"version": "0.8.22+commit.4fc1097e"
 	},
 	"language": "Solidity",
 	"output": {
@@ -8,6 +8,43 @@
 			{
 				"inputs": [],
 				"name": "createSimpleStorageContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "sfGet",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "sfStore",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -47,7 +84,7 @@
 		"compilationTarget": {
 			"contracts/StorageFactory.sol": "StorageFactory"
 		},
-		"evmVersion": "london",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -60,19 +97,19 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0xf523fcf1606c880eba53b218a8b941dc6b23269cf7b741716b74fd5de45e23f3",
+			"keccak256": "0x92df3b506b6d18d61014e05630ba0dcf70777b3b49d9c49b213c434f7cad1033",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://38cd31af1f77a7174b429caa5ebae6de31c61642a29ed9b59302a835145f1a15",
-				"dweb:/ipfs/QmUXpQGNNfy76BBnod4pwQvCcVcwPdVCr4Jyo56kjSiDz9"
+				"bzz-raw://5fa1173a90f691611fa34447827719ead32fbae7d0ec07714a68804757232cab",
+				"dweb:/ipfs/QmatF92CqcTxB5McvWgxbt12ef6CmjJSvFTrHjBjMc3RpN"
 			]
 		},
 		"contracts/StorageFactory.sol": {
-			"keccak256": "0x55adb194123292a1b40779824c1350578f6226de1090c71ef0ac2262977d459e",
+			"keccak256": "0x0f103cd323ef23809371800992014e41ef44a634c382390718d6574d8a4e7d1e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3b205d6228cd164d086e7efb3cc43176d519e82413d1ab33ce4e26a1904f58dd",
-				"dweb:/ipfs/QmPyVikQhWLY2BW9H4eeBBXYbuiuQdhziLE3yu3KpARDLB"
+				"bzz-raw://2ebcc3458ee77c70e9edee051ed0de3c84ea3711537b0585480e1cc18e1cfad3",
+				"dweb:/ipfs/QmbKkps4zNx2tqJtEpW9h8soUWzJyyDZqsNwpMs8knnah3"
 			]
 		}
 	},
