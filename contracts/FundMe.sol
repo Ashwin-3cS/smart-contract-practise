@@ -6,8 +6,17 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 contract FundMe{
     uint256 public minimumUsd=  50 * 1e18; //Solidity basically has problem handling Decimals , in conversion rate function it gives the opwith 18 decimals make sure you have 18 decimals equally everywhere
+    address[] public funders;
+    mapping( address => uint256 )public addressToAmountFunded;
+
+
+
+
+
     function fund()public payable {
         require(getConversionRate(msg.value)>=minimumUsd,"did'nt send enough eth");
+        funders.push(msg.sender);
+        addressToAmountFunded[msg.sender]=msg.value;
     }
 
     function getPrice()public view returns (uint256){
